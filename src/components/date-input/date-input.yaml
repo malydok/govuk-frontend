@@ -1,3 +1,49 @@
+params:
+- name: id
+  type: string
+  required: false
+  description: Optional id. This is used for the main component and to compose id attribute for each item.
+- name: name
+  type: string
+  required: false
+  description: Optional name. This is used to compose the name attribute for each item.
+- name: items
+  type: array
+  required: true
+  description: An array of input objects with name, value and optional classes.
+  params:
+  - name: id
+    type: string
+    required: false
+    description: Optional item-specific id. If provided, it will be used instead of the generated id.
+  - name: name
+    type: string
+    required: true
+    description: Item-specific name attribute.
+  - name: value
+    type: string
+    required: false
+    description: Optional item-specific value attribute. If provided, it will be used as the initial value of the input.
+- name: hint
+  type: object
+  required: false
+  description: Optional hint. See [hint](https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/README.md#component-arguments) component.
+- name: errorMessage
+  type: object
+  required: false
+  description: Optional error message. See [errorMessage](https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/README.md#component-arguments) component.
+- name: fieldset
+  type: object
+  required: false
+  description: Arguments for the fieldset component (e.g. legend). See [fieldset](https://github.com/alphagov/govuk-frontend/blob/master/src/components/fieldset/README.md#component-arguments) component.
+- name: classes
+  type: string
+  required: false
+  description: Optional additional classes to add to the anchor tag.
+- name: attributes
+  type: object
+  required: false
+  description: Any extra HTML attributes (for example data attributes) to add to the anchor tag.
 examples:
 - name: default
   data:
